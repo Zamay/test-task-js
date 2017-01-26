@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SoftGroup test</title>
+  <link rel="stylesheet" href="style.css">
+  <script   src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+  </script>
+  <script>
+    $(document).ready(function(){
+    $('.tabs_menu a').click(function(e) {
+        e.preventDefault();
+        $('.tabs_menu .active').removeClass('active');
+        $(this).addClass('active').parent().addClass('active');
+        var tab = $(this).attr('href');
+        $('.tab').not(tab).css({'display':'none'});
+        $(tab).fadeIn(400);
+        });
+    });
+  </script>
+</head>
+<body>
+  <div class="contaiber">
+    <div class="head">
+      <div class="logo"><img src="logo.png" alt=""></div>
+      <div class="_h3">
+        <h3>SoftGroup</h3>
+        <p>Тестове завдання</p>
+      </div>
+      <ul class="nav">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="my.html">Автор</a></li>
+        <li><a href="https://www.softgroup.ua/">Soft Group</a></li>
+      </ul>
+    </div>
+    <div class="body">
+      <div class="tabs_box">
+        <ul class="tabs_menu">
+          <li><a href="#box1">Задание 1</a></li>
+          <li><a href="#box2">Задание 2</a></li>
+          <li><a href="#box3">Задание 3</a></li>
+          <li><a href="#box4">Задание 4</a></li>
+          <li><a href="#box5">Задание 5</a></li>
+          <li><a href="#box6">Задание 6</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="tab" id="box1">
+          <h3>Задание 1</h3>
+          <p>
+            У форму вводиться число N. Знайти всі досконалі числа до N.
+            Досконале число - це таке число, що дорівнює сумі всіх своїх дільників,
+            крім себе самого. Наприклад, число 6 є досконалим, тому що крім себе
+            самого ділиться на числа 1, 2 і 3, які в сумі дають 6.
+          </p>
+          <h3>Код на JS</h3>
+          <div class="_cod_js">
+            <p data-height="243" data-theme-id="dark" data-slug-hash="oBNRgO" data-default-tab="js,result" data-user="Zamay" data-embed-version="2" data-pen-title="oBNRgO" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/Zamay/pen/oBNRgO/">oBNRgO</a> by Zamay (<a href="http://codepen.io/Zamay">@Zamay</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+        </div>
+        <div class="tab" id="box2">
+          <h3>Задание 2</h3>
+          <p>
+            У форму вводиться текст, слова в якому розділені пробілами і
+            розділовими знаками. Вилучити з цього тексту всі слова найбільшої
+            довжини. (Слів найбільшої довжини може бути декілька).
+          </p>
+          <h3>Код на JS</h3>
+          <div class="_cod_js">
+            <p data-height="433" data-theme-id="dark" data-slug-hash="WRbNgm" data-default-tab="js,result" data-user="Zamay" data-embed-version="2" data-pen-title="Слова с наибольшей длиной " data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/Zamay/pen/WRbNgm/">Слова с наибольшей длиной </a> by Zamay (<a href="http://codepen.io/Zamay">@Zamay</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+        </div>
+        <div class="tab" id="box3">
+          <h3>Задание 3</h3>
+          <p>
+            Вводяться N натуральних чисел більше 2. Підрахувати, скільки серед
+            них простих чисел.
+          </p>
+          <h3>Код на JS</h3>
+          <div class="_cod_js">
+            <p data-height="450" data-theme-id="dark" data-slug-hash="ygyBmQ" data-default-tab="js,result" data-user="Zamay" data-embed-version="2" data-pen-title="Поиск натурального числа" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/Zamay/pen/ygyBmQ/">Поиск натурального числа</a> by Zamay (<a href="http://codepen.io/Zamay">@Zamay</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+        </div>
+        <div class="tab" id="box4">
+          <h3>Задание 4</h3>
+          <p>
+            Політичне життя однієї країни дуже жваве. У країні діє K політичних
+            партій, кожна з яких регулярно оголошує національний страйк. Дні, коли
+            хоча б одна з партій оголошує страйк, за умови, що це не субота або неділя
+            (коли і так ніхто не працює), завдають великої шкоди економіці країни.
+          </p>
+          <p>
+            i-та партія оголошує страйки строго кожні bi днів, починаючи з дня з
+            номером ai. Тобто i-та партія оголошує страйки в дні ai, ai + bi, ai + 2bi і т.д.
+            Якщо в якийсь день кілька партій оголошує страйк, то це вважається
+            загальнонаціональним страйком.
+          </p>
+          <p>
+            У календарі країни N днів, пронумерованих від 1 до N. Перший день
+            року є понеділком, шостий і сьомий дні року - вихідні, тиждень складається
+            з семи днів.
+          </p>
+          <h2>Вхідні дані</h2>
+          <p>Програма отримує на вхід число днів в році N (1 < N < 1000000) і число
+              політичних партій K (1 < K < 100 ). Далі йде K рядків, що описують графіки
+              проведення страйків. i-й рядок містить числа ai і bi (1 < ai, bi < N ).
+          </p>
+          <h2>Вихідні дані</h2>
+          <p>Виведіть єдине число: кількість страйків, що відбулися протягом року.</p>
+          <h2>Примітка</h2>
+          <p>Перша партія оголошує страйки в дні 2, 5, 8, 11, 14, 17. Друга партія
+              оголошує страйки в дні 3, 8, 13, 18. Третя партія - в дні 9 і 17. Дні номер 6,
+              7, 13, 14 є вихідними. Таким чином, загальнонаціональні страйки пройдуть в
+              дні 2, 3, 5, 8, 9, 11, 17, 18.
+          </p>
+        </div>
+        <div class="tab" id="box5">
+          <h3>Задание 5</h3>
+          <p>
+            Задано текст. Словом вважається послідовність непробільних символів,
+які йдуть підряд. Слова розділені одним або більшим числом пробілів або
+символами кінця рядка.
+          </p>
+          <p>
+            Для кожного слова з цього тексту підрахуйте, скільки разів воно
+зустрічалося в цьому тексті раніше. Використайте словники.
+          </p>
+          <h3>Код на JS</h3>
+          <div class="_cod_js">
+            <p data-height="400" data-theme-id="dark" data-slug-hash="ygyvQE" data-default-tab="js,result" data-user="Zamay" data-embed-version="2" data-pen-title="Задача 5" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/Zamay/pen/ygyvQE/">Задача 5</a> by Zamay (<a href="http://codepen.io/Zamay">@Zamay</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+        </div>
+        <div class="tab" id="box6">
+          <h3>Задание 6</h3>
+          <p>
+            Змагання з гри «Тетріс-онлайн» проводяться за такими правилами:
+          </p>
+          <p>
+            Кожен учасник реєструється на сайті гри під певним ігровим ім'ям. Імена
+учасників не повторюються.
+          </p>
+          <p>
+            Чемпіонат проводиться протягом певного часу. У будь-який момент цього
+часу будь-який зареєстрований учасник може зайти на сайт чемпіонату і
+почати залікову гру. Після закінчення гри її результат (кількість балів)
+фіксується і заноситься до протоколу.
+          </p>
+          <p>
+            Учасники мають право грати кілька разів. Кількість спроб одного учасника
+не обмежується. Остаточний результат учасника визначається по одній грі,
+кращою для даного учасника. Більш високе місце в змаганнях займає
+учасник, що показав кращий результат. При рівності результатів більш
+високе місце займає учасник, раніше показав кращий результат.
+
+          </p>
+          <p>
+            В ході змагань заповнюється протокол, кожен рядок якого описує одну гру
+і містить результат учасника і його ігрове ім'я. Протокол формується в
+реальному часі по ходу проведення чемпіонату, тому рядки в ньому
+розташовані в порядку проведення ігор: чим раніше зустрічається рядок у
+протоколі, тим раніше закінчилася відповідна цьому рядку гра.
+
+          </p>
+          <p>Напишіть програму, яка за даними протоколу визначає переможця і
+призерів. Гарантується, що в чемпіонаті бере участь не менше трьох гравців.
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <p class="footer" style="padding-top: 40px;">Автор: &copy; Замай Дмитрий </p>
+    <p class="footer">2017</p>
+
+  </div>
+</body>
+</html>
